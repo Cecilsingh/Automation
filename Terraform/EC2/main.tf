@@ -26,3 +26,13 @@ resource "aws_instance" "ceciltf" {
     "environment" = "<omitted>"
   }
 }
+
+output "instance_id" {
+  description = "ID of the EC2 instance"
+  value       = aws_instance.ceciltf.id
+}
+
+output "instance_private_ip" {
+  description = "Private IP address of the EC2 instance"
+  value       = aws_instance.ceciltf.private_ip
+}
